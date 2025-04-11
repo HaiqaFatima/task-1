@@ -1,0 +1,282 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+    scroll-behavior: smooth;
+}
+
+/* Ensure full-page layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(236, 196, 196, 0.85);
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    background: rgb(230, 167, 167);
+    color: black;
+}
+
+/* Mobile Navigation - Hidden by Default */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.mobile-menu a:hover {
+    background: rgb(204, 168, 211);
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    background: rgba(231, 188, 188, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    background: rgb(224, 146, 146);
+    color: black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: rgb(239, 217, 159);
+}
+
+/* Product Section */
+.products {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgb(208, 173, 216);
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    width: 220px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.about img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Footer */
+footer {
+    background: rgb(233, 207, 207);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet & Smaller Laptops */
+@media screen and (max-width: 1024px) {
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 80%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none; /* Hide main menu on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 28px;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .about img {
+        width: 90%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

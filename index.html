@@ -3,18 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Title Here</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Luxe Jewels - Timeless Elegance</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Navigation -->
     <header>
-        <h1>IDK</h1>
+        <nav>
+            <h1 class="logo">LUXE JEWELS</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <p>Insert Introduction Here</p>
-    </main>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Timeless Elegance, Crafted for You</h2>
+            <p>Discover handcrafted luxury jewelry designed to shine.</p>
+            <a href="#collection" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="products">
+        <h3>Our Exclusive Collection</h3>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Diamond Ring">
+                <h4>Diamond Ring</h4>
+            </div>
+            <div class="product-card">
+                <img src="https://tiesh.lk/wp-content/uploads/2024/09/TCN11811.jpg" alt="Gold Necklace">
+                <h4>Gold Necklace</h4>
+            </div>
+            <div class="product-card">
+                <img src="https://www.zamels.com.au/cdn/shop/files/2013681_2.jpg?v=1697170747" alt="Elegant Bracelet">
+                <h4>Elegant Bracelet</h4>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0560/4425/files/1735815510-strathberry-lana-pearl-earrings-plp.jpg?v=1741085546" alt="Pearl Earrings">
+                <h4>Pearl Earrings</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h3>About Us</h3>
+        <p>At Luxe Jewels, we craft timeless, high-quality jewelry designed to last a lifetime.</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/62d9617705e5212d0d72a6f7/1675855043146-CU2RWMKNAL883EPOJWCJ/Forever+Aesthetic+Jewellery-117.jpg?format=2500w" alt="Jewelry Crafting">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h3>Get in Touch</h3>
+        <p>Email: support@luxejewels.com</p>
+        <p>Phone: +1 234 567 890</p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Start Footer Here</p>
+        <p>© 2025 Luxe Jewels | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </div>
     </footer>
+
 </body>
 </html>
